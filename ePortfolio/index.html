@@ -7,21 +7,77 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <link rel="stylesheet" href="assets.style.css">
+   <script src="https://kit.fontawesome.com/64a2634525.js" crossorigin="anonymous"></script>
+
 </head>
 
 </head>
 <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
-                <img src="./assets/assets/jennes-logo2.PNG" alt="">
+                <img id="personal-logo" src="./assets/assets/jennes-logo2.PNG" alt="my personal logo">
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link">
-                    <a href=""></a>
+                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#projects" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a>
+                </li>
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">
+                        <i class="fas fa-adjust"></i>
+                    </a>
                 </li>
             </ul>
         </nav>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title orange">I'm Jenne.</h1>
+                <p class="header__para">I'm a
+                    <b class="orange">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences. 
+                    <br>
+                    Here's a bit more
+                    <b class="orange click" onclick="toggleModal()">about me</b>.
+                </p>
+                <div class="social__list">
+                    <a href="https://www.linkedin.com/in/jennifer-erving-848257225/" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.github.com/jenne-erving-1986" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="./assets/assets/Resume1.docx" target="_blank" class="social__link click">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+        </a>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click">
+            </div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                <p class="modal__para">I'm a 40 year-old American
+                <b class="orange">frontend software engineer</b>
+                with experience and training from 
+                <b class="orange">FES</b>
+                </p>
+            </div>
+        </div>
     </section>
 </body>
 </html>
