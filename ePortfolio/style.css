@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+
+.click:hover {
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(0.8);
 }
 
 /*LANDING PAGE*/
@@ -20,11 +30,13 @@ a {
     text-decoration: none;
 }
 
-/*NAV BAR*/
+
+/*NAVIGATION BAR*/
 
 #personal-logo {
     width: 80px;
     height: 80px;
+    filter: invert(1);
 }
 
 .nav__link--anchor {
@@ -82,12 +94,23 @@ nav, .scroll, .header {
     transition: all 600ms 800ms;
 }
 
+.container {
+    padding: 50px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
 .click {
     cursor: pointer;
     transition: all 300ms ease;
 }
 
-.fa-adjust {
+.fa-solid {
     font-size: 20px;
 }
 
@@ -97,17 +120,22 @@ nav, .scroll, .header {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50, -50);
+    transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 500px;
+    max-width: 1000px;
     padding: 0 30px;
 }
+
 
 .title {
     font-size: 120px;
     margin-bottom: 12px;
     text-align: left;
     line-height: 1;
+}
+
+a {
+    text-decoration: none;
 }
 
 .orange {
@@ -152,11 +180,15 @@ p {
     border: none;
     background-color: #242424;
     color: white;
-    position: fixed;
+    position: absolute;
     bottom: 32px;
     right: 40px;
     z-index: 100;
     box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
+}
+
+.button {
+    cursor: pointer;
 }
 
 .scroll {
@@ -182,56 +214,41 @@ p {
     height: 6px;
     background-color: #242424;
     border-radius: 2px;
-    animation: scroll 1000ms infinite alternate;
+    animation: scroll 1000ms infinite alternate-reverse;
 }
 
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50, -50);
-    width: 90%;
-    max-width: 1100px;
-    height: 700px;
-    border-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    visibility: hidden;
-    z-index: -1;
-    transition: visability 1s, z-index 1s, box-shadow 0.5 ease;
+@keyframes scroll {
+    0% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
 }
 
-.modal__about {
-    background-color: rgb(245, 245, 245);
-    transform: translateX(-110%);
+
+
+
+/*PROJECTS*/
+
+.section__title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 60px;
 }
 
-.modal__half {
-    width: 50%;
-    padding: 40px 72px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.project__img {
+    width: 100%;
+}
+
+.project__wrapper {
     position: relative;
-    transition: all 300ms ease-in;
 }
 
-.modal__title {
-    font-size: 26px;
+.project__description {
+    position: absolute;
 }
-
-.modal__sub-title {
-    margin: 12px 0 24px 0;
-    font-size: 14px;
-}
-
-.modal__para {
-    margin-bottom: 12px;
-    line-height: 1.75;
-}
-
-
-
 
 /*MEDIA*/
 
